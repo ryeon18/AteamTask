@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", Malgun Gothic, "맑은 고딕", AppleGothic, Dotum,
+    "돋움", sans-serif;
+}
+
+// html,
+// body {
+//   position: relative;
+//   margin: 0;
+//   padding: 0;
+//   font-size: 16px;
+//   width: 100%;
+//   height: 100%;
+//   overflow-x: hidden;
+//   // overflow-x: hidden;
+//   // background: #fce95e;
+//   overscroll-behavior-y: none;
+//   scroll-behavior: smooth;
+// }
+
+// ::-webkit-scrollbar {
+//   width: 0; /* Remove scrollbar space */
+//   background: transparent; /* Optional: just make scrollbar invisible */
+// }
+
+// * {
+//   flex-shrink: 0;
+// }
+
+// .link {
+//   cursor: pointer;
+// }
+
+// .inline {
+//   display: inline;
+// }
+
+// .inline-block {
+//   display: inline-block;
+// }
+
+// .underlined-link {
+//   text-decoration: underline;
+//   cursor: pointer;
+// }
+
+// @for $i from 0 through 70 {
+//   .top-#{$i * 5} {
+//     margin-top: #{$i * 0.3}rem;
+//   }
+
+//   .right-#{$i * 5} {
+//     margin-right: #{$i * 0.3}rem;
+//   }
+
+//   .bottom-#{$i * 5} {
+//     margin-bottom: #{$i * 0.3}rem;
+//   }
+
+//   .left-#{$i * 5} {
+//     margin-left: #{$i * 0.3}rem;
+//   }
+
+//   .padding-#{$i * 5} {
+//     padding: #{$i * 0.3}rem;
+//   }
+
+//   .width-#{$i * 2} {
+//     width: #{$i * 0.125}rem;
+//   }
+
+//   .height-#{$i * 2} {
+//     height: #{$i * 0.125}rem;
+//   }
+
+//   .font-#{$i * 2} {
+//     font-size: #{$i * 0.125}rem;
+//   }
+// }
+
+// .max-width {
+//   width: 100%;
+// }
+
+// .cap-max-width {
+//   max-width: 100%;
+// }
+
+// .max-height {
+//   height: 100%;
+// }
+
+// .padded-top {
+//   padding-top: 40px;
+// }
+
+// .relative {
+//   position: relative;
+// }
+
+// .absolute {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+// }
+
+// .fixed {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+// }
+
+// .padded-horizontal {
+//   padding-left: calc((100% - 1200px) / 2);
+//   padding-right: calc((100% - 1200px) / 2);
+
+//   @media only screen and (max-width: 1140px) {
+//     padding-left: 2.5rem;
+//     padding-right: 2.5rem;
+//   }
+// }
+
+// .padded-horizontal-800 {
+//   padding-left: calc((100% - 800px) / 2);
+//   padding-right: calc((100% - 800px) / 2);
+
+//   @media only screen and (max-width: 1140px) {
+//     padding-left: 2.5rem;
+//     padding-right: 2.5rem;
+//   }
+// }
+
+// .margin-left {
+//   margin-left: calc((100% - 1120px) / 2);
+//   @media only screen and (max-width: 1140px) {
+//     margin-left: 2.5rem;
+//   }
+// }
+
+// .overflow-ellipsis {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+
+// .overflow-visible {
+//   overflow: visible;
+// }
+
+// .overflow-hidden {
+//   overflow: hidden;
+// }
+
+// .bordered {
+//   border: solid 2px $primary;
+// }
+
+// .border-50 {
+//   border-radius: 50%;
+// }
+
+// .object-fit-cover {
+//   object-fit: cover;
+// }
+
+// .object-fit-contain {
+//   object-fit: contain;
+// }
+
+// .rotate-180 {
+//   transform: rotate(180deg);
+// }
+
+// .unselectable {
+//   -webkit-touch-callout: none;
+//   -webkit-user-select: none;
+//   -khtml-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   -o-user-select: none;
+//   user-select: none;
+// }
+
+// .line-height-0 {
+//   line-height: 0;
+// }
