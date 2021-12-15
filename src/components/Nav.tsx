@@ -4,8 +4,8 @@ import vector from "../assets/images/vector.png";
 
 const Nav: React.FC = () => {
   return (
-    <header className="nav">
-      <div className="navBox">
+    <header className="navBox">
+      <div className="logoBox">
         <img alt="logo" src={logo} />
         <ul>
           <li>
