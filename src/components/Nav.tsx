@@ -1,15 +1,16 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
+import vector from "../assets/images/vector.png";
 
 const Nav: React.FC = () => {
   return (
     <header className="nav">
-      <div>
-        <img alt="/" src={logo} />
-      </div>
-      <div>
+      <div className="navBox">
+        <img alt="logo" src={logo} />
         <ul>
-          <li>A가공업체</li>
+          <li>
+            <img alt="vector" src={vector} />A 가공 업체
+          </li>
           <li>로그아웃</li>
         </ul>
       </div>

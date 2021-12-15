@@ -1,25 +1,41 @@
 .nav {
   position: relative;
-  top: 0;
   background: #1565c0;
+  height: 70px;
+  width: 100%;
 
-  h1 {
-    position: absolute;
-    left: 2.78%;
-    right: 86.6%;
-    top: 35.71%;
-    bottom: 35.71%;
-  }
-  ul {
-    position: absolute;
-    left: 11.82%;
-    right: 56.07%;
-    top: 0%;
-    bottom: 0%;
-    li {
+  .navBox {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+
+    img {
+      position: absolute;
+      height: 20px;
+      width: 153px;
+      top: 25px;
+      left: 40px;
     }
-    :first-child::after {
-      content: "|";
+    ul {
+      display: flex;
+      position: absolute;
+      top: 25px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #ffffff;
+
+      li {
+        img {
+          height: 15px;
+          width: 16.67px;
+          left: -30px;
+          top: 2px;
+        }
+      }
+      :first-child::after {
+        padding: 0 30px;
+        content: "|";
+      }
     }
   }
 }
