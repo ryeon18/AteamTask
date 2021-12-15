@@ -8,7 +8,7 @@ import {
 import Main from "./pages/Main";
 import Nav from "./components/Nav";
 
-const Switchs = () => {
+const Switchs: React.FC = () => {
   return (
     <>
       <Nav />

@@ -1,0 +1,15 @@
+.mainpage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cardContainer {
+    background-color: black;
+    height: 20px;
+    width: 153px;
+    left: 40px;
+    top: 25px;
+    border-radius: 0px;
+  }
+}
