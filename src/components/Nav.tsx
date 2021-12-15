@@ -6,11 +6,12 @@ const Nav: React.FC = () => {
   return (
     <header className="navBox">
       <div className="logoBox">
-        <img alt="logo" src={logo} />
-        <ul>
+        <img className="logo" alt="logo" src={logo} />
+        <ul className="userBox">
           <li>
-            <img alt="vector" src={vector} />A 가공 업체
+            <img className="vectorImage" alt="vector" src={vector} />
           </li>
+          <li>A 가공 업체</li>
           <li>로그아웃</li>
         </ul>
       </div>

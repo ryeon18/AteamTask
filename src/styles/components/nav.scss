@@ -8,9 +8,8 @@
   .logoBox {
     display: flex;
     justify-content: flex-end;
-    padding-right: 50px;
 
-    img {
+    .logo {
       position: absolute;
       height: 20px;
       width: 153px;
@@ -18,25 +17,36 @@
       left: 40px;
     }
 
-    ul {
+    .userBox {
       display: flex;
       position: absolute;
       top: 25px;
       font-size: 14px;
       line-height: 20px;
       color: #ffffff;
+      margin-right: 40px;
+      // width: 247.67px;
 
       li {
-        img {
-          height: 15px;
+        font-family: Noto Sans KR Medium;
+        font-weight: 400;
+        font-size: 14px;
+
+        .vectorImage {
+          position: absolute;
           width: 16.67px;
-          left: -30px;
-          top: 2px;
         }
       }
 
-      :first-child::after {
-        padding: 0 30px;
+      :first-child {
+        height: 15px;
+        width: 16.67px;
+        left: 0px;
+        margin-right: 8px;
+      }
+
+      :nth-child(2)::after {
+        padding: 0 32px;
         content: "|";
       }
     }
