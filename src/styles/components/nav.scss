@@ -3,6 +3,7 @@
   background: #1565c0;
   height: 70px;
   width: 100%;
+  background: #1565c0;
 
   .navBox {
     display: flex;
@@ -16,6 +17,7 @@
       top: 25px;
       left: 40px;
     }
+
     ul {
       display: flex;
       position: absolute;
@@ -32,6 +34,7 @@
           top: 2px;
         }
       }
+
       :first-child::after {
         padding: 0 30px;
         content: "|";
