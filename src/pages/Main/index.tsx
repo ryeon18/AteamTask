@@ -1,8 +1,20 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Card from "./Card";
 import NoCard from "./NoCard";
 
-const Main: FC = () => {
+type Props {
+  CardProps:string[];
+}
+
+const Main = () => {
+  const [cardData, setCardData] = useState([]);
+
+  useEffect(() => {
+    fetch("/Carddata.json")
+      .then((res) => res.json())
+      .then((cardData) => setCardData(cardData));
+  }, []);
+
   return (
     <main className="mainpage">
       <section className="mainHeader">
@@ -16,9 +28,9 @@ const Main: FC = () => {
         <button className="toggle">토글</button>
         <span>상담 중인 요청만 보기</span>
       </section>
-      <Card />
+      <Card CardProps={cardData} />
       {/* <NoCard /> */}
-      {/* {request ? <Card /> : <NoCard />}; */}
+      {/* {cardData ? <Card CardProps={cardData} /> : <NoCard />}; */}
     </main>
   );
 };
