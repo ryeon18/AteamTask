@@ -6,7 +6,7 @@ interface Props {
 
 const Card: FC<Props> = ({ item, ...props }) => {
   return (
-    <div>
+    <ul className="cardList">
       {item?.map((data: any) => {
         const {
           id,
@@ -20,7 +20,7 @@ const Card: FC<Props> = ({ item, ...props }) => {
           status,
         } = data;
         return (
-          <div className="card" key={id}>
+          <li className="card" key={id}>
             <div className="container">
               <div className="title">{title}</div>
               {status === "상담중" && (
@@ -30,7 +30,7 @@ const Card: FC<Props> = ({ item, ...props }) => {
               )}
               <div className="client">{client}</div>
               <div className="due">{due}까지 납기</div>
-              <hr className="divider"></hr>
+              <hr className="divider" />
               <ul className="itemList">
                 <li>도면갯수</li>
                 <li>총 수량</li>
@@ -46,10 +46,10 @@ const Card: FC<Props> = ({ item, ...props }) => {
               <button className="viewRequest">요청 내역 보기</button>
               <button className="chat">채팅하기</button>
             </div>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 };
 

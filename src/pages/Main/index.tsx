@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import NoCard from "./NoCard";
-import { Request } from "../../../public/Carddata";
-
-var g: Request;
 
 const Main = () => {
   const [cardData, setCardData] = useState([]);
@@ -11,7 +8,7 @@ const Main = () => {
   useEffect(() => {
     fetch("/Carddata.json")
       .then((res) => res.json())
-      .then((cardData) => setCardData(cardData));
+      .then((cardData) => setCardData(cardData.requests));
   }, []);
 
   return (
@@ -27,7 +24,7 @@ const Main = () => {
         <button className="toggle">토글</button>
         <span>상담 중인 요청만 보기</span>
       </section>
-      {/* <Card item={cardData} /> */}
+      {/* <Card2 /> */}
       {/* <NoCard /> */}
       {cardData.length > 0 ? <Card item={cardData} /> : <NoCard />}
     </main>

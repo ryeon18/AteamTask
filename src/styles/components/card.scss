@@ -1,23 +1,28 @@
 .mainpage {
   .card {
-    position: absolute;
-    height: 356px;
+    position: relative;
+    height: 366px;
     width: 366px;
     border: 1px solid #e5e5e5;
     top: 262px;
     border-radius: 4px;
     padding: 24px, 16px, 24px, 16px;
+    display: grid;
+    grid: repeat(3, 138px) / auto-flow 308px;
+    grid-template-columns: 366px 366px 366px;
+    grid-column-gap: 13px;
 
     .container {
       position: absolute;
       top: 0;
       left: 16px;
+      width: 100%;
 
       .title {
         position: absolute;
         height: 24px;
-        width: 125px;
-        top: 16px;
+        width: 100%;
+        top: 24px;
 
         //styleName: 16pt - 600 (소제목);
         font-family: Noto Sans KR Bold;
@@ -53,6 +58,7 @@
         width: 50px;
         border-radius: 12px;
         border: 1px solid #ffa000;
+
         span {
           position: absolute;
           left: 8px;
