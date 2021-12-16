@@ -27,9 +27,9 @@ const Main = () => {
         <button className="toggle">토글</button>
         <span>상담 중인 요청만 보기</span>
       </section>
-      <Card item={cardData} />
+      {/* <Card item={cardData} /> */}
       {/* <NoCard /> */}
-      {/* {cardData.length > 0 ? <Card item={cardData} /> : <NoCard />} */}
+      {cardData.length > 0 ? <Card item={cardData} /> : <NoCard />}
     </main>
   );
 };
