@@ -1,10 +1,9 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import NoCard from "./NoCard";
+import { Request } from "../../../public/Carddata";
 
-type Props {
-  CardProps:string[];
-}
+var g: Request;
 
 const Main = () => {
   const [cardData, setCardData] = useState([]);
@@ -28,9 +27,9 @@ const Main = () => {
         <button className="toggle">토글</button>
         <span>상담 중인 요청만 보기</span>
       </section>
-      <Card CardProps={cardData} />
+      <Card item={cardData} />
       {/* <NoCard /> */}
-      {/* {cardData ? <Card CardProps={cardData} /> : <NoCard />}; */}
+      {/* {cardData.length > 0 ? <Card item={cardData} /> : <NoCard />} */}
     </main>
   );
 };
