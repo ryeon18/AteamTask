@@ -1,0 +1,25 @@
+.mainpage {
+  .nocard {
+    position: absolute;
+    top: 262px;
+    height: 100px;
+    width: 1130px;
+    border-radius: 4px;
+    border: 1px solid #c2c2c2;
+
+    span {
+      position: absolute;
+      top: 40px;
+      left: 466px;
+      //styleName: 14pt - 400 (본문용);
+      font-family: Noto Sans KR Regular;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #939fa5;
+    }
+  }
+}

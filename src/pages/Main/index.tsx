@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import Card from "./Card";
+import NoCard from "./NoCard";
 
 const Main: FC = () => {
   return (
@@ -16,6 +17,8 @@ const Main: FC = () => {
         <span>상담 중인 요청만 보기</span>
       </section>
       <Card />
+      {/* <NoCard /> */}
+      {/* {request ? <Card /> : <NoCard />}; */}
     </main>
   );
 };
