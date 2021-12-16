@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import Card from "./Card";
 
-const Main: React.FC = () => {
+const Main: FC = () => {
   return (
     <main className="mainpage">
       <section className="mainHeader">
@@ -9,14 +9,11 @@ const Main: React.FC = () => {
         <p>파트너님에게 딱 맞는 요청서를 찾아보세요</p>
       </section>
       <section className="filterBox">
-        <div className="buttonBox">
-          <button className="methodButton">가공방식</button>
-          <button className="materialButton">재료</button>
-        </div>
-        <div className="toggleBox">
-          <div>토글</div>
-          <div>상담 중인 요청만 보기</div>
-        </div>
+        <button className="methodButton">가공방식</button>
+        <button className="materialButton">재료</button>
+
+        <button className="toggle">토글</button>
+        <span>상담 중인 요청만 보기</span>
       </section>
       <Card />
     </main>
