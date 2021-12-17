@@ -88,44 +88,39 @@
         z-index: 99;
         position: absolute;
         height: 730px;
-        width: 360px;
+        width: 280px;
         left: 0px;
         top: 0px;
         border-radius: 0px;
-        background-color: #323d45;
+        background-color: #ffffff;
         // opacity: 0.5;
+        .logo {
+          position: absolute;
+          left: 20px;
+        }
 
+        .modalUserBox {
+          width: 100%;
+          position: absolute;
+          border-top: 1px solid #e5e5e5;
+          top: 44px;
+
+          li {
+            padding-left: 32px;
+            padding-top: 36px;
+            img {
+              margin-right: 8px;
+            }
+          }
+        }
         .modal {
           position: absolute;
-          width: 280px;
+          width: 80px;
           height: 730px;
-          left: 0px;
+          left: 280px;
           top: 0px;
-          background-color: #ffffff;
-
-          .logo {
-            position: absolute;
-            left: 20px;
-          }
-
-          .modalUserBox {
-            width: 100%;
-            position: absolute;
-            border-top: 1px solid #e5e5e5;
-            top: 44px;
-
-            li {
-              position: absolute;
-              top: 32px;
-              left: 32px;
-            }
-
-            :first-child {
-              height: 15px;
-              width: 15px;
-              left: 32px;
-            }
-          }
+          background-color: #323d45;
+          opacity: 0.5;
         }
       }
     }
