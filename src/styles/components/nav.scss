@@ -3,11 +3,32 @@
   background: #1565c0;
   height: 70px;
   width: 1440px;
-  background: #1565c0;
+
+  @media (max-width: 360px) {
+    height: 44px;
+    width: 360px;
+  }
 
   .logoBox {
     display: flex;
     justify-content: flex-end;
+
+    .fa-bars {
+      display: none;
+
+      @media (max-width: 360px) {
+        display: inline;
+        position: absolute;
+        top: 14px;
+        left: 23px;
+        height: 20px;
+        color: white;
+      }
+    }
+
+    .non-modal {
+      display: none;
+    }
 
     .logo {
       position: absolute;
@@ -15,6 +36,14 @@
       width: 153px;
       top: 25px;
       left: 40px;
+
+      @media (max-width: 360px) {
+        position: absolute;
+        height: 12px;
+        width: 92px;
+        left: 60px;
+        top: 16px;
+      }
     }
 
     .userBox {
@@ -48,6 +77,56 @@
       :nth-child(2)::after {
         padding: 0 32px;
         content: "|";
+      }
+
+      @media (max-width: 360px) {
+        display: none;
+      }
+    }
+    @media (max-width: 360px) {
+      .showModal {
+        z-index: 99;
+        position: absolute;
+        height: 730px;
+        width: 360px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+        background-color: #323d45;
+        // opacity: 0.5;
+
+        .modal {
+          position: absolute;
+          width: 280px;
+          height: 730px;
+          left: 0px;
+          top: 0px;
+          background-color: #ffffff;
+
+          .logo {
+            position: absolute;
+            left: 20px;
+          }
+
+          .modalUserBox {
+            width: 100%;
+            position: absolute;
+            border-top: 1px solid #e5e5e5;
+            top: 44px;
+
+            li {
+              position: absolute;
+              top: 32px;
+              left: 32px;
+            }
+
+            :first-child {
+              height: 15px;
+              width: 15px;
+              left: 32px;
+            }
+          }
+        }
       }
     }
   }

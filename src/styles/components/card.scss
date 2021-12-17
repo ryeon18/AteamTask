@@ -60,6 +60,10 @@
           border-radius: 12px;
           border: 1px solid #ffa000;
 
+          @media (max-width: 360px) {
+            left: 234px;
+          }
+
           span {
             position: absolute;
             left: 8px;
@@ -98,6 +102,10 @@
           position: absolute;
           top: 132px;
           border: 1px solid #e5e5e5;
+
+          @media (max-width: 360px) {
+            width: 284px;
+          }
         }
 
         .itemList {
@@ -156,6 +164,7 @@
           background-color: #2196f3;
           border: 1px solid #2196f3;
           color: #ffffff;
+          cursor: pointer;
         }
 
         .chat {
@@ -176,12 +185,21 @@
           background-color: #ffffff;
           color: #2196f3;
           border: 1px solid #2196f3;
+          cursor: pointer;
         }
       }
     }
     .card:hover {
-      cursor: pointer;
+      // cursor: pointer;
       border: 2px solid #2196f3;
+    }
+
+    @media (max-width: 360px) {
+      grid: none;
+      .card {
+        top: 216px;
+        width: 320px;
+      }
     }
   }
 }
