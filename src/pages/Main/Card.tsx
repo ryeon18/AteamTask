@@ -19,6 +19,10 @@ const Card: FC<Props> = ({ item, ...props }) => {
           material,
           status,
         } = data;
+
+        const methodName = method.join(", ");
+        const materialName = material.join(", ");
+
         return (
           <li className="card" key={id}>
             <div className="container">
@@ -40,8 +44,8 @@ const Card: FC<Props> = ({ item, ...props }) => {
               <ul className="itemSpec">
                 <li>{count}개</li>
                 <li>{amount}개</li>
-                <li>{method}</li>
-                <li>{material}</li>
+                <li>{methodName}</li>
+                <li>{materialName}</li>
               </ul>
               <button className="viewRequest">요청 내역 보기</button>
               <button className="chat">채팅하기</button>

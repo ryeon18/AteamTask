@@ -102,14 +102,20 @@
       }
     }
 
-    .toggle {
+    .track {
       position: absolute;
-      height: 20px;
-      width: 36px;
       left: 954px;
-      top: 3px;
-      border-radius: 0px;
-      font-size: 5px;
+      top: 6px;
+      height: 14px;
+      width: 34px;
+    }
+
+    .knob {
+      position: absolute;
+      height: 22px;
+      width: 22px;
+      left: 950px;
+      top: 2px;
     }
 
     span {
@@ -133,10 +139,16 @@
       .toggleBox {
         display: block;
         position: absolute;
-        // display: block;
 
-        .toggle {
+        .track {
+          top: 26px;
+          position: absolute;
+          left: 2px;
+        }
+
+        .knob {
           top: 23px;
+          position: absolute;
           left: 0;
         }
 

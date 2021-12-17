@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import NoCard from "./NoCard";
 import dropDown from "../../assets/images/dropDown.png";
+import track from "../../assets/images/track.png";
+import knob from "../../assets/images/knob.png";
 
 const Main = () => {
   const [cardData, setCardData] = useState([]);
   const [checkSwitch, setCheckSwitch] = useState(false);
+  const [drop, setDrop] = useState(false);
 
   useEffect(() => {
     fetch("/Carddata.json")
@@ -21,9 +24,6 @@ const Main = () => {
     return console.log("data", getConsultant);
   }
 
-  // const deletedCommentList = commentBox.filter(item => item.id !== id);
-  // this.setState({ commentBox: deletedCommentList });
-
   return (
     <main className="mainpage">
       <section className="mainHeader">
@@ -32,7 +32,7 @@ const Main = () => {
       </section>
       <section className="filterBox">
         <div className="buttonBox">
-          <button className="methodButton">
+          <button className="methodButton" onMouseEnter={() => setDrop(!drop)}>
             가공방식
             <img alt="dropDownIcon" src={dropDown} />
           </button>
@@ -41,9 +41,14 @@ const Main = () => {
           </button>
         </div>
         <div className="toggleBox">
-          <button className="toggle" onClick={() => showConsultant(cardData)}>
-            토글
-          </button>
+          <div
+            className="handleToggle"
+            onClick={() => setCheckSwitch(!checkSwitch)}
+          >
+            <img className="track" alt="track" src={track} />
+            <img className="knob" alt="knob" src={knob} />
+          </div>
+
           <span>상담 중인 요청만 보기</span>
         </div>
       </section>
