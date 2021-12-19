@@ -1,8 +1,5 @@
 .mainpage {
   position: relative;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   width: 100%;
   left: 155px;
   top: 0;
@@ -58,7 +55,6 @@
       font-style: normal;
       font-weight: 500;
       line-height: 14px;
-      letter-spacing: 0px;
       text-align: left;
       border: 1px solid #939fa5;
       color: #323d45;
@@ -157,16 +153,28 @@
         display: block;
         position: absolute;
 
-        .track {
+        .offTrack {
           top: 26px;
           position: absolute;
           left: 2px;
         }
 
-        .knob {
-          top: 23px;
+        .offKnob {
+          top: 22px;
           position: absolute;
           left: 0;
+        }
+
+        .onTrack {
+          top: 26px;
+          position: absolute;
+          left: 2px;
+        }
+
+        .onKnob {
+          top: 22px;
+          position: absolute;
+          left: 17px;
         }
 
         span {

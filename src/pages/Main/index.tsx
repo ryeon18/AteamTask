@@ -40,7 +40,7 @@ const Main = () => {
             재료 <img alt="dropDownIcon" src={dropDown} />
           </button>
         </div>
-        <div className="toggleBox">
+        <article className="toggleBox">
           <div
             className="handleToggle"
             onClick={() => setCheckSwitch(!checkSwitch)}
@@ -58,7 +58,7 @@ const Main = () => {
           </div>
 
           <span>상담 중인 요청만 보기</span>
-        </div>
+        </article>
       </section>
       {/* <NoCard /> */}
       {cardData.length > 0 ? <Card item={cardData} /> : <NoCard />}
