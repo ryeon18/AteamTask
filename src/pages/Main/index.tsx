@@ -45,8 +45,16 @@ const Main = () => {
             className="handleToggle"
             onClick={() => setCheckSwitch(!checkSwitch)}
           >
-            <img className="track" alt="track" src={track} />
-            <img className="knob" alt="knob" src={knob} />
+            <img
+              className={checkSwitch ? "offTrack" : "onTrack"}
+              alt="track"
+              src={track}
+            />
+            <img
+              className={checkSwitch ? "offKnob" : "onKnob"}
+              alt="knob"
+              src={knob}
+            />
           </div>
 
           <span>상담 중인 요청만 보기</span>

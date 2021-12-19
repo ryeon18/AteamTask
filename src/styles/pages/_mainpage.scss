@@ -102,7 +102,7 @@
       }
     }
 
-    .track {
+    .offTrack {
       position: absolute;
       left: 954px;
       top: 6px;
@@ -110,11 +110,28 @@
       width: 34px;
     }
 
-    .knob {
+    .onTrack {
+      position: absolute;
+      left: 954px;
+      top: 6px;
+      height: 14px;
+      width: 34px;
+      color: #bbdefb;
+    }
+
+    .offKnob {
       position: absolute;
       height: 22px;
       width: 22px;
       left: 950px;
+      top: 2px;
+    }
+
+    .onKnob {
+      position: absolute;
+      height: 22px;
+      width: 22px;
+      left: 970px;
       top: 2px;
     }
 
