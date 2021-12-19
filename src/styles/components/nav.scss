@@ -93,6 +93,16 @@
         border-radius: 0px;
         background-color: #ffffff;
         // opacity: 0.5;
+        animation: bg1_slideIn 2s ease-in;
+
+        @keyframes bg1_slideIn {
+          from {
+            left: -100%;
+          }
+          to {
+            left: 0%;
+          }
+        }
         .logo {
           position: absolute;
           left: 20px;

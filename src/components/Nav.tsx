@@ -13,17 +13,15 @@ const Nav: React.FC = () => {
           <i className="fas fa-bars" />
         </div>
         <div className={`${modal ? "showModal" : "non-modal"}`}>
-          <div className="showModal">
-            <img className="logo" alt="logo" src={colorlogo} />
-            <ul className="modalUserBox">
-              <li>
-                <img className="vectorImage" alt="vector" src={mobileVector} />
-                <span>파트너정밀가공</span>
-              </li>
-              <li>로그아웃</li>
-            </ul>
-            <div className="modal" onClick={() => setModal(!modal)}></div>
-          </div>
+          <img className="logo" alt="logo" src={colorlogo} />
+          <ul className="modalUserBox">
+            <li>
+              <img className="vectorImage" alt="vector" src={mobileVector} />
+              <span>파트너정밀가공</span>
+            </li>
+            <li>로그아웃</li>
+          </ul>
+          <div className="modal" onClick={() => setModal(!modal)} />
         </div>
         <img className="logo" alt="logo" src={logo} />
         <ul className="userBox">
