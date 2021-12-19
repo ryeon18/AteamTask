@@ -60,7 +60,7 @@
 
 ### ▶︎ 구현 화면
 
-![구현화면](https://user-images.githubusercontent.com/62207127/146672704-49ba4baa-40f6-4a64-b358-59317f2527ea.gif)
+![구현화면](https://user-images.githubusercontent.com/62207127/146673646-d873e5f1-30d2-4242-8f16-1dfe24768c88.gif)
 
 <br>
 
