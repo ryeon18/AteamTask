@@ -4,6 +4,8 @@ import NoCard from "./NoCard";
 import dropDown from "../../assets/images/dropDown.png";
 import track from "../../assets/images/track.png";
 import knob from "../../assets/images/knob.png";
+import onTrack from "../../assets/images/onTrack.png";
+import onKnob from "../../assets/images/onKnob.png";
 
 const Main = () => {
   const [cardData, setCardData] = useState([]);
@@ -16,13 +18,42 @@ const Main = () => {
       .then((cardData) => setCardData(cardData.requests));
   }, []);
 
-  function showConsultant(cardData: any) {
+  // const isClickFilterBtn = () => {
+  //   setCheckSwitch(!checkSwitch);
+
+  //   const getConsultant = cardData.filter(
+  //     (cardData: any) => cardData.status === "상담중"
+  //   );
+
+  //   if (!checkSwitch) {
+  //     setCardData(getConsultant);
+  //   } else setCardData(cardData);
+
+  //   // setCardData(getConsultant);
+  // };
+
+  const isClickFilterBtn = () => {
+    setCheckSwitch(!checkSwitch);
     const getConsultant = cardData.filter(
       (cardData: any) => cardData.status === "상담중"
     );
 
-    return console.log("data", getConsultant);
-  }
+    if (!checkSwitch) {
+      setCardData(getConsultant);
+    } else {
+      fetch("/Carddata.json")
+        .then((res) => res.json())
+        .then((cardData) => setCardData(cardData.requests));
+    }
+  };
+
+  // function showConsultant(cardData: any) {
+  //   const getConsultant = cardData.filter(
+  //     (cardData: any) => cardData.status === "상담중"
+  //   );
+
+  //   return getConsultant;
+  // }
 
   return (
     <main className="mainpage">
@@ -43,17 +74,19 @@ const Main = () => {
         <article className="toggleBox">
           <div
             className="handleToggle"
-            onClick={() => setCheckSwitch(!checkSwitch)}
+            // onClick={() => showConsultant(cardData)}
+            // onClick={() => setCheckSwitch(!checkSwitch)}
+            onClick={isClickFilterBtn}
           >
             <img
-              className={checkSwitch ? "offTrack" : "onTrack"}
+              className={!checkSwitch ? "offTrack" : "onTrack"}
               alt="track"
-              src={track}
+              src={!checkSwitch ? track : onTrack}
             />
             <img
-              className={checkSwitch ? "offKnob" : "onKnob"}
+              className={!checkSwitch ? "offKnob" : "onKnob"}
               alt="knob"
-              src={knob}
+              src={!checkSwitch ? knob : onKnob}
             />
           </div>
 
