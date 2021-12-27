@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import NoCard from "./NoCard";
+import DropMenuFirst from "./DropMenuFirst";
 import dropDown from "../../assets/images/dropDown.png";
 import track from "../../assets/images/track.png";
 import knob from "../../assets/images/knob.png";
@@ -18,20 +19,6 @@ const Main = () => {
       .then((cardData) => setCardData(cardData.requests));
   }, []);
 
-  // const isClickFilterBtn = () => {
-  //   setCheckSwitch(!checkSwitch);
-
-  //   const getConsultant = cardData.filter(
-  //     (cardData: any) => cardData.status === "상담중"
-  //   );
-
-  //   if (!checkSwitch) {
-  //     setCardData(getConsultant);
-  //   } else setCardData(cardData);
-
-  //   // setCardData(getConsultant);
-  // };
-
   const isClickFilterBtn = () => {
     setCheckSwitch(!checkSwitch);
     const getConsultant = cardData.filter(
@@ -47,13 +34,9 @@ const Main = () => {
     }
   };
 
-  // function showConsultant(cardData: any) {
-  //   const getConsultant = cardData.filter(
-  //     (cardData: any) => cardData.status === "상담중"
-  //   );
-
-  //   return getConsultant;
-  // }
+  const handleDrop = () => {
+    return setDrop(!drop);
+  };
 
   return (
     <main className="mainpage">
@@ -63,21 +46,17 @@ const Main = () => {
       </section>
       <section className="filterBox">
         <div className="buttonBox">
-          <button className="methodButton" onMouseEnter={() => setDrop(!drop)}>
+          <button className="methodButton " onMouseEnter={handleDrop}>
             가공방식
             <img alt="dropDownIcon" src={dropDown} />
           </button>
+          {drop && <DropMenuFirst onMouseLeave={handleDrop} />}
           <button className="materialButton">
             재료 <img alt="dropDownIcon" src={dropDown} />
           </button>
         </div>
         <article className="toggleBox">
-          <div
-            className="handleToggle"
-            // onClick={() => showConsultant(cardData)}
-            // onClick={() => setCheckSwitch(!checkSwitch)}
-            onClick={isClickFilterBtn}
-          >
+          <div className="handleToggle" onClick={isClickFilterBtn}>
             <img
               className={!checkSwitch ? "offTrack" : "onTrack"}
               alt="track"
